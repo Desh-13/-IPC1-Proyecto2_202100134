@@ -1,0 +1,11 @@
+<h1>PACIENTE NUEVO</h1>
+<form>
+    <label>Nombre</label>
+    <input type="text" [(ngModel)]="nombre" name="nombre"><br>
+    <label>correo Electronico</label>
+    <input type="text" [(ngModel)]="correo" name="correo"><br>
+    <label>Password</label>
+    <input type="password" [(ngModel)]="password" name="password"><br><br>
+    <button (click)=" enviarDatos()"> Registrar Paciente </button>
+    <a href="/registroPaciente">Paciente Nuevo</a>
+</form>
