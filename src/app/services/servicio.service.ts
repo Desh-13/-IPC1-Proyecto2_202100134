@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { usuario } from '../modelos/usuario';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,6 +13,10 @@ export class ServicioService {
   console.log( `${this.urlBackend}/registroPaciente`)
   const options = {responseType: 'text' as 'json'}
   return this.http.post(`${this.urlBackend}/registroPaciente`,user,options)
-  
+
+  }
+  getPaciente(){
+    console.log(`${this.urlBackend}/obtenerPaciente`)
+    return this.http.get<usuario>(`${this.urlBackend}/obtenerPaciente`)
   }
 }

@@ -8,9 +8,16 @@ app.use(express.json());
 export default app;
 
 app.get('/obtenerPaciente', function(req,res){
-
+    
     console.log('es un get')
-    res.send({msg:'consulta GET funcionando'})
+   
+    let usuario = {
+        nombre: 'Juan',
+        correo: 'juan@gmail.com'
+    }
+    res.send(usuario)
+  
+    
 
 })
 

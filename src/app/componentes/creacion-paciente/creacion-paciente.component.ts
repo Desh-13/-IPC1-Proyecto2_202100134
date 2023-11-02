@@ -17,9 +17,8 @@ export class CreacionPacienteComponent {
   correo: any;
   password: any;
   usuario: usuario = new usuario();
-constructor(private service: ServicioService){
+constructor(private service: ServicioService){}
 
-}
   enviarDatos(){
 
     this.usuario.nombre = this.nombre
